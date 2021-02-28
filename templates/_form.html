@@ -1,0 +1,7 @@
+{% load tailwind_filters %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" class="bg-blue-500 hover:bg-blue-600 text-white mt-2 px-3 py-1 rounded-md cursor-pointer" value="{{ btn_text }}">
+</form>
